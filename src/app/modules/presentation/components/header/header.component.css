@@ -1,0 +1,9 @@
+.content-header {
+    position:fixed;
+    z-index: 1;
+}
+
+.mat-toolbar.mat-primary {
+    background-color: #228b22;
+    color: #fff;
+}

@@ -1,0 +1,21 @@
+#construction-image{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.footer-fijo{
+    bottom:0;
+    position: fixed;
+    width: 100%;
+}
+
+/* DESKTOP */
+
+@media (max-width: 768px){
+    #construction-image{
+        margin-top: 30%;
+        width: 80%;
+        height: 400px;
+    }    
+}

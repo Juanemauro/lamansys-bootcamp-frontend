@@ -1,0 +1,255 @@
+.container {
+    margin-top: 20%;
+}
+
+.no-tasks {
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #bfff00;
+    text-align: center;
+    margin-top: 80%;
+    margin-left: 5%;
+    margin-bottom: 1%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 90%;
+    font-size: large;
+}
+
+.story-description {
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #d8e4bc;
+    text-align: center;
+    margin-top: 20%;
+    margin-left: 5%;
+    margin-bottom: 1%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 90%;
+    font-size: large;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 5%;
+    width: 100%;
+}
+
+mat-card {
+    padding-left: 1rem;
+    margin-right: 10%;
+    background-color: #bfff00;
+}
+
+#ring-loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #bfff00;
+    width: 30px;
+    height: 30px;
+    background-color: #E0E0E0;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40%;
+    margin-top: 100%;
+    margin-bottom: 100%;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#add-task {
+    background-color: #bfff00;
+    width: 70%;
+    height: 10%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    font-size: large;
+    font-weight: 700;
+    padding: 2rem;
+}
+
+.add-task {
+    display: flex;
+    align-items: center;
+    margin: 0% 25% 0% 15%;
+    width: 100%;
+    height: 150px;
+}
+
+.add-task>p {
+    font-size: large;
+    font-weight: 700;
+}
+
+#add-task-icon {
+    margin-right: 0.2rem;
+    width: 25px;
+    height: 25px;
+}
+
+.tasks-list {
+    margin-top: 0;
+}
+
+mat-card-content {
+    width: 90%;
+}
+
+
+.task-detail-card,
+.task-info {
+    display: flex;
+    align-items: center;
+}
+
+.task-detail-card {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task-info {
+    align-items: center;
+    padding-top: 1%;
+    justify-content: flex-start;
+}
+
+mat-card-title {
+    padding-top: 5%;
+    width: 100px;
+    font-size: 20px;
+}
+
+#delete-task-button {
+    background-color: #bfff00;
+    padding: 0;
+    border: none;
+}
+
+.delete-icon {
+    width: 35px;
+    margin-left: 10%;
+    margin-right: 0%;
+}
+
+.task-list-name {
+    margin-left: 5%;
+    padding-top: 2%;
+}
+
+.redirections {
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    margin-left: 35%;
+    margin-bottom: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 90%;
+}
+
+.checkboxs:checked+.task-list-name {
+    text-decoration: line-through;
+}
+
+.checkboxs {
+    margin: -3% 5% 6% 0;
+    width: 20px;
+    height: 20px;
+}
+
+/* DESKTOP */
+
+@media (min-width: 768px) {
+    .container {
+        margin-top: 5%;
+    }
+
+    .story-description {
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-bottom: 0%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        width: 90%;
+        font-size: large;
+    }
+
+    .mat-card {
+        padding-left: 2%;
+        margin-right: 10%;
+        margin-left: 15%;
+        width: 60%;
+        margin-bottom: 0%;
+    }
+
+    li {
+        margin-bottom: 2%;
+    }
+
+    #delete-task-button {
+        background-color: #bfff00;
+        padding: 0;
+        border: none;
+        cursor: pointer;
+    }
+
+    .delete-icon {
+        width: 35px;
+        margin-left: 10%;
+        margin-right: 0%;
+    }
+
+    #add-task {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .add-task {
+        display: flex;
+        align-items: center;
+        margin: 0% 25% 0% 38%;
+        width: 30%;
+        height: 150px;
+    }
+
+    .add-task>p {
+        font-size: large;
+        font-weight: 700;
+    }
+
+    #add-task-icon {
+        margin-right: 0.2rem;
+        width: 25px;
+        height: 25px;
+    }
+
+}

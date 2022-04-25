@@ -1,0 +1,14 @@
+<article class="container">
+    <section id="datos">
+        <h2>¿Estás seguro que quieres eliminar esta tarea?</h2>
+        <div mat-dialog-actions class="botones-delete">            
+            <button mat-button mat-dialog-close="">Cancelar</button>
+            <button mat-raised-button cdkFocusInitial (click)="deleteTask()">Eliminar</button>
+        </div>
+    </section>
+    <div id="delete-task">
+    </div>
+    <div id="informe-status">
+        <p>Completando el proceso..</p>
+    </div>
+</article>

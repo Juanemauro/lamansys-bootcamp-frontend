@@ -1,0 +1,32 @@
+<app-menu-desktop></app-menu-desktop>
+<!-- RING LOADER -->
+<div id="ring-loader">
+</div>
+
+<!-- renderización -->
+<section class="container">
+    <section *ngIf="noEpics == 'Este proyecto no existe. La URL es incorrecta.' || noEpics == 'Este proyecto no tiene épicas.'; else elseBlock">
+        <article class="no-epics">
+            {{noEpics}}           
+        </article>
+        <article class="redirections">
+            <app-redirections></app-redirections>
+        </article>      
+    </section>
+    <ng-template #elseBlock class="project-data">
+        <article class="project-description">
+            <h1>{{description}}</h1>
+        </article>
+        <li *ngFor="let e of epics" class="epic-lists">
+           
+            <mat-card class="example-card" (click)="goToEpicDetail(e.id)">
+                <mat-card-header>
+                    <div mat-card-avatar></div>
+                    <mat-card-title>{{e.name}}</mat-card-title>
+                    <mat-card-subtitle>{{e.description}}</mat-card-subtitle>
+                  </mat-card-header>
+            </mat-card>
+        </li>
+    </ng-template>
+</section>
+<app-footer></app-footer>

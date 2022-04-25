@@ -1,0 +1,52 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav class="sidenav" [ngClass]="{hidden: !(isHandset | async)!.matches}" fixedInViewport="false"
+        [mode]="(isHandset | async)!.matches ? 'over' : 'side'" [opened]="!(isHandset | async)!.matches">
+        <mat-toolbar color="primary" class="header-navbar"><img src="assets\images\logo-personalizado.png" alt=""
+                srcset="" class="image-logo"></mat-toolbar>
+        <mat-nav-list>
+            <a class="nav-bar-item" mat-list-item routerLink="/home" routerLinkActive="active"
+                (click)="sidenav.close()">
+                <mat-icon class="icon-navbar">home</mat-icon>Home
+            </a>
+            <a class="nav-bar-item" mat-list-item routerLink="/my-projects" routerLinkActive="active"
+                (click)="sidenav.close()">
+                <mat-icon class="icon-navbar">folder_special</mat-icon>Mis proyectos
+            </a>
+            <a class="nav-bar-item" mat-list-item routerLink="/my-stories" routerLinkActive="active"
+                (click)="sidenav.close()">
+                <mat-icon class="icon-navbar">view_list</mat-icon>Mis stories
+            </a>
+            <a class="nav-bar-item" mat-list-item routerLink="/settings" routerLinkActive="active"
+                (click)="sidenav.close()">
+                <mat-icon class="icon-navbar">settings</mat-icon>Settings
+            </a>
+            <a class="nav-bar-item" mat-list-item routerLinkActive="active" (click)="sidenav.close()"
+                (click)="logout()">
+                <mat-icon class="icon-navbar">power_off</mat-icon>Logout
+            </a>
+        </mat-nav-list>
+        <section class="user-profile-link">
+            <img src="assets\images\profile-image.JPG" alt="" srcset="" class="user-image-navbar">
+            <a class="nav-bar-item " routerLink="/my-profile" routerLinkActive="active" (click)="sidenav.close()">Juan
+                Mauro</a>
+        </section>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary" class="content-header">
+            <button class="menu-button" type="button" aria-label="Toggle sidenav" mat-icon-button
+                (click)="sidenav.toggle()"
+                *ngIf="url=='/my-projects' || url=='/settings' || url=='/my-stories' || url=='/home'  || url=='/' || url=='/my-profile' ">
+                <mat-icon aria-label="Side nav toggle icon">
+                    menu</mat-icon>
+            </button>
+            <button type="button" aria-label="Toggle sidenav" mat-icon-button
+                *ngIf="!(url=='/my-projects' || url=='/settings' || url=='/my-stories' || url=='/home' || url=='/' || url=='/login' || url=='/my-profile')">
+                <mat-icon (click)="goBack()">arrow_back_ios</mat-icon>
+            </button>
+            <span  [innerHTML]="title"></span>
+        </mat-toolbar>
+        <section class="general-view">
+            <router-outlet></router-outlet>
+        </section>
+    </mat-sidenav-content>
+</mat-sidenav-container>

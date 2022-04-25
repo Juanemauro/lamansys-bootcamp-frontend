@@ -1,0 +1,8 @@
+main{
+	height: 100%;
+	padding: 5%;
+	padding-top: 10%;
+	overflow-y: scroll;  
+	text-transform: uppercase;
+}
+

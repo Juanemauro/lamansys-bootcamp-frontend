@@ -1,0 +1,46 @@
+@media (min-width: 768px) {
+    footer {
+        background-color: #212121;
+        height: 90px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .right-section {
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+
+    .right-section>h2 {
+        margin-right: 1%;
+        font-weight: 500;
+        color: white;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+        color: white;
+        font-weight: 500;
+    }
+
+    .logos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logos-footer {
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    footer {
+        display: none;
+    }
+}

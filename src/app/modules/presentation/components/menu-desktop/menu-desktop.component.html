@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+    <section class="sections">
+        <a class="nav-bar-item" routerLink="/home" routerLinkActive="active">
+            <mat-icon class="icon-navbar">home</mat-icon>Home
+        </a>
+        <a class="nav-bar-item" routerLink="/my-projects" routerLinkActive="active">
+            <mat-icon class="icon-navbar">folder_special</mat-icon>Mis proyectos
+        </a>
+        <a class="nav-bar-item" routerLink="/my-stories" routerLinkActive="active">
+            <mat-icon class="icon-navbar">view_list</mat-icon>Mis stories
+        </a>
+        <a class="nav-bar-item" routerLink="/settings" routerLinkActive="active">
+            <mat-icon class="icon-navbar">settings</mat-icon>Settings
+        </a>
+    </section>
+    <section class="sesion">
+        <a class="logout" (click)="logout()">
+            <mat-icon class="icon-navbar">power_off</mat-icon>Logout
+        </a>
+        <a class="nav-bar-item" (click)="logout()">
+            <a class="nav-bar-item " routerLink="/my-profile" routerLinkActive="active"><img
+                    src="assets\images\profile-image.JPG" alt="" srcset="" class="user-image-avatar">Juan
+                Mauro</a>
+        </a>
+    </section>
+
+</mat-toolbar>

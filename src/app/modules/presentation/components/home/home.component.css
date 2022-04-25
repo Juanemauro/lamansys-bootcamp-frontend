@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap');
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #228b22;
+    margin-left: 0;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.main-logo {
+   
+    width: 250px;
+    height: 250px;
+    margin: 5% 15% 0% 15%;
+}
+
+.btn-home {
+    width: 150px;
+    height: 150px;
+    margin-right: 5px;
+    border-radius: 75px;
+    background-color: #a3c1ad;
+    font-size: x-large;
+}
+
+.home-buttons {
+    margin-top: 0%;
+    margin-right: 5%;
+    margin-left: 0%;
+    margin-bottom: 10%;
+}
+
+/* - HOVER - */
+.btn-home:hover {
+    background-color: #2e8b57;
+    color: aliceblue;
+}
+
+.info {
+    text-align: center;    
+    color: white;
+     
+}
+
+.empresa-logo {
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 5%;
+    justify-items: center;
+}
+
+/* DESKTOP */
+
+@media (min-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .main-logo {
+        
+        width: 350px;
+        height: 300px;
+        margin: 0% 40% 0% 40%;
+    }
+
+    .home-buttons {
+        margin-top: 0%;
+        margin-right: 40%;
+        margin-left: 40%;
+        margin-bottom: 2%;
+        display: flex;
+        align-items: center;
+    }
+
+    .btn-home {
+        width: 150px;
+        height: 150px;
+        margin-right: 5px;
+        border-radius: 100px;
+        background-color: #2e8b57;
+    }
+
+    .user-image-navbar {
+        width: 150px;
+        height: 150px;
+        border-radius: 100px;
+    }
+
+    .empresas {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 3%;
+    }
+
+    .empresa-logo {
+        width: 20%;
+        margin-top: 1%;
+        margin-left: 5%;
+        margin-bottom: 0%;
+        display: flex;
+        justify-items: center;
+    }
+    .container{
+        padding-top: 1%;
+    }
+
+    .mat-raised-button{
+        width: 150px;
+        height: 150px;
+        color: green;
+        border-radius: 75px;
+        margin-right: 35px;
+    }
+
+    .mat-icon{
+        font-size: 75px;
+        width: 75px;
+        height: 75px;
+    }      
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    .user-image-navbar {
+        width: 90px;
+        height: 90px;
+        border-radius: 100px;
+    }
+
+    .home-buttons {
+        margin: 0% 4% 8% 7%;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .mat-raised-button{
+        width: 100px;
+        height: 100px;
+        color: green;
+        border-radius: 75px;
+        margin-right: 50px;
+    }
+
+    .mat-icon{
+        font-size: 60px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .main-logo{
+        width: 200px;
+        height: 200px;
+        margin: 0% 40% 0% 25%;
+    }
+}

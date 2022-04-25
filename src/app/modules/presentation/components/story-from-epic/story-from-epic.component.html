@@ -1,0 +1,34 @@
+<app-menu-desktop></app-menu-desktop>
+<div id="ring-loader">
+</div>
+
+<article class="story-description" *ngIf="existeStoryEnEpic"> {{description}} </article>
+<section class="add-task" *ngIf="existeStoryEnEpic">
+    <button id="add-task" type="button" (click)="addTask()" mat-raised-button>
+        <mat-icon id="add-task-icon">add_circle</mat-icon>
+        Agregar una tarea
+    </button>
+
+</section>
+<article class="no-tasks"
+    *ngIf="noTasks == 'Todavía no hay hay tareas cargadas en esta story.' || noTasks == 'Esta story no existe dentro de esta épica. La URL es incorrecta.'; else elseBlock">
+    {{noTasks}}</article>
+<ng-template #elseBlock>
+    <ul class="tasks-list">
+        <li *ngFor="let t of tasks">
+            <mat-card>
+                <section class="task-detail-card">
+                    <div class="task-info">
+                        <input type="checkbox" name="" id="" class="checkboxs">
+                        <mat-card-title class="task-list-name">{{t.name}}</mat-card-title>
+                    </div>
+                    <button (click)="deleteTask(t.id)" id="delete-task-button">
+                        <mat-icon class="delete-icon">delete</mat-icon>
+                    </button>
+                </section>
+                <mat-card-content>{{t.description}}</mat-card-content>
+            </mat-card>
+        </li>
+    </ul>
+</ng-template>
+<app-footer></app-footer>

@@ -1,0 +1,115 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.example-container .mat-form-field+.mat-form-field {
+  margin-left: 8px;
+}
+
+.sugerencia-form {
+  color: green;
+}
+
+h1 {
+  text-align: center;
+  align-items: center;
+}
+
+.dialog-body .mat-dialog-container {
+  padding: 0;
+  background: grey;
+}
+
+.mat-dialog-actions{
+  align-items: center;
+  justify-content: center;
+  padding: 5% 0% 0% 0%;;
+}
+
+.addTask-form{
+  width: 90%;
+}
+
+mat-form-field {
+  width: 110%;
+  margin-bottom: 2px;
+}
+
+
+mat-error{
+  margin-bottom: 3%;
+  font-weight: 550;
+  width: 95%;
+}
+
+
+#carga-task {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #bfff00;
+  width: 30px;
+  height: 30px;
+  background-color: #E0E0E0;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-left: 100px;
+  margin-top: 125px;
+  margin-bottom: 30px;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+      -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+      -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/* INFORME PROCESO DE DATOS */
+
+#informe-status{
+  display: none;
+  align-items: center;
+
+  margin-left: 30%;
+  width: 100%;
+  font-weight: 500;
+}
+
+
+/* DESKTOP VERSION */
+
+@media (min-width: 768px) {
+  .container{
+    padding: 5% 15% 5% 30%;
+  }
+  #carga-task {
+    margin-left: 180px;
+    margin-top: 75px;
+    margin-bottom: 30px;
+  }
+  #informe-status{
+    margin-left: 40%;
+    text-align: center;
+  }
+
+}

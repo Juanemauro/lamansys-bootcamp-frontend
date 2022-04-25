@@ -1,0 +1,32 @@
+<app-menu-desktop></app-menu-desktop>
+<!-- RING LOADER -->
+<div id="ring-loader">
+</div>
+
+<section class="container">
+    <section
+        *ngIf="noStories == 'Todavía no hay stories cargadas en esta epic.' || noStories == 'Esta épica no existe dentro del proyecto. La URL es incorrecta.'; else elseBlock">
+        <article class="no-stories">
+            {{noStories}}
+        </article>
+        <article class="redirections">
+            <app-redirections></app-redirections>
+        </article>
+
+    </section>
+    <ng-template #elseBlock>
+        <article class="epic-description"> {{description}} </article>
+        <ul>
+            <li *ngFor="let s of stories">
+                <mat-card class="example-card" (click)="goToStoryDetail(s.id)">
+                    <mat-card-header>
+                        <div mat-card-avatar></div>
+                        <mat-card-title>{{s.name}}</mat-card-title>
+                        <mat-card-subtitle>{{s.description}}</mat-card-subtitle>
+                    </mat-card-header>
+                </mat-card>
+            </li>
+        </ul>
+    </ng-template>
+</section>
+<app-footer></app-footer>

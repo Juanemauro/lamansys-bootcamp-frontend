@@ -1,0 +1,142 @@
+.container {
+  margin-top: 20%;
+}
+
+.main-container{
+  height: 100%;
+}
+
+.no-stories {
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #d1e231;
+  text-align: center;
+  margin-top: 20rem;
+  margin-left: 5%;
+  margin-bottom: 1%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 90%;
+  font-size: large;
+}
+
+h1{
+  text-align: center;
+}
+
+.epic-description {
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #d8e4bc;
+  text-align: center;
+  margin-top: 20%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 90%;
+  font-size: large;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 5%;
+  width: 100%;
+}
+
+mat-card {
+  padding-left: 0.5rem;
+  margin-right: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  background-color: #d1e231;
+}
+
+#ring-loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #d1e231;
+  width: 30px;
+  height: 30px;
+  background-color: #E0E0E0;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-left: 40%;
+  margin-top: 100%;
+  margin-bottom: 100%;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.redirections {
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  margin-left: 35%;
+  margin-bottom: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 90%;
+}
+
+/* DESKTOP */
+
+@media (min-width: 768px) {
+  .container {
+    margin-top: 3%;
+    padding: 2% 10% 10% 10%;
+  }
+  .epic-description {
+    margin-top: 0%;
+    margin-bottom: 4%;
+    padding-top: 0%;
+    padding-bottom: 5%;
+  }
+
+  li {
+    margin-bottom: 1%;
+  }
+
+  .no-stories {
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-bottom: 1%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .redirections {
+    margin-left: 45%;
+    margin-bottom: 5%;
+    padding-top: 1%;
+  }
+}

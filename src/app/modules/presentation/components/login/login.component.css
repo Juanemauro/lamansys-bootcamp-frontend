@@ -1,0 +1,117 @@
+.example-container .mat-form-field+.mat-form-field {
+  margin-left: 8px;
+}
+
+.sugerencia-form {
+  color: green;
+}
+
+.welcome {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 7%;
+}
+
+.dialog-body .mat-dialog-container {
+  padding: 0;
+  background: grey;
+}
+
+.mat-dialog-actions {
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#carga-datos {
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+mat-form-field {
+  width: 90%;
+}
+
+.mat-dialog-actions {
+  align-items: center;
+  justify-content: center;
+  padding: 7% 0% 0% 15%;
+}
+
+mat-error {
+  margin-bottom: 3%;
+  font-weight: 550;
+  width: 92%;
+}
+
+@media (max-width: 768px){
+  .welcome {
+    margin-top: 5%;
+  }
+
+  .login-logo{
+    background-color: white;
+    height: 10%;
+  }
+
+  .gif-login{
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (min-width: 768px) and (max-width:1024) {
+  .welcome {
+    margin-top: 5%;
+  }
+
+  #carga-datos {
+    margin-top: 0%;
+    margin-left: 38%;
+  }
+
+  .footer-fijo {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+  }  
+
+}
+
+/* XL DESKTOP*/
+
+@media (min-width: 1024px) {
+  .welcome {
+    margin-top: 1%;
+  }
+
+  #carga-datos {
+    margin-top: 2%;
+    margin-left: 39%;
+  }
+
+  .footer-fijo {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+  }
+
+  .login-logo{
+    background-color: white;
+    height: 10%;
+  }
+
+  .gif-login{
+    width: 130px;
+    height: 130px;
+  }
+}
+

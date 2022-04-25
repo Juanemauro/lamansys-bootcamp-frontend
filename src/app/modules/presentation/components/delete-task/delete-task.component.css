@@ -1,0 +1,81 @@
+#datos {
+  text-align: center;
+  padding: 0% 5% 4% 5%;
+}
+
+#delete-task {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #bfff00;
+  width: 30px;
+  height: 30px;
+  background-color: #E0E0E0;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-left: 100px;
+  margin-top: 15%;
+  margin-bottom: 30px;
+}
+
+.mat-dialog-actions {
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#informe-status {
+  display: none;
+  align-items: center;
+  margin-left: 17%;
+  width: 90%;
+  font-weight: 500;
+}
+
+/* DESKTOP */
+
+@media (min-width: 768px) {
+  .container {
+    padding: 5% 15% 0% 15%;
+  }
+
+  #delete-task {
+    margin-left: 45%;
+    margin-top: 0%;
+    margin-bottom: 1%;
+  }
+
+
+  #informe-status {
+    margin-left: 40%;
+    text-align: center;
+  }
+
+  .mat-dialog-actions {
+    padding-right: 5%;
+  }
+}

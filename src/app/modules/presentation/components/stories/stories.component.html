@@ -1,0 +1,28 @@
+<app-menu-desktop></app-menu-desktop>
+<section class="main-container">
+    <!-- RING LOADER -->
+    <div id="ring-loader">
+    </div>
+
+    <section *ngIf="noStories == 'Todavía no hay stories asignadas para ti.'; else elseBlock">
+        <article class="no-stories">
+            {{noStories}}
+        </article>
+        <article class="redirections">
+            <app-redirections></app-redirections>
+        </article>
+    </section>
+    <ng-template #elseBlock>
+        <section class="container">
+            <h1>Listado de stories</h1>
+            <ul>
+                <li *ngFor="let s of userStories">
+                    <mat-card class="example-card">
+                        <mat-card-title>{{s.name}}</mat-card-title>
+                    </mat-card>
+                </li>
+            </ul>
+        </section>
+    </ng-template>
+</section>
+<app-footer></app-footer>

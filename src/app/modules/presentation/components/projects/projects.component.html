@@ -1,0 +1,23 @@
+<app-menu-desktop></app-menu-desktop>
+<section class="main-container">
+    <!-- RING LOADER -->
+<div id="ring-loader">
+</div>
+
+<!-- NO HAY PROJECTS -->
+<section *ngIf="noProjects == 'No participas de ningún proyecto. Regresa más tarde'; else elseBlock">
+    <article class="no-projects">
+        {{noProjects}}            
+    </article>
+    <article class="redirections">
+        <app-redirections></app-redirections>
+    </article>
+</section>
+   <!-- RENDERIZACIÓN DE PROJECTS-->
+<ng-template #elseBlock>
+    <section class="container">
+        <project-item *ngFor="let p of projects" [project]="p"></project-item>
+    </section>
+</ng-template>
+</section>
+<app-footer class="footer-fijo"></app-footer>

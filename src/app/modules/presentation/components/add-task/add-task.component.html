@@ -1,0 +1,31 @@
+<article class="container">
+    <section id="carga-datos">
+        <h1 mat-dialog-title>Agregar tarea</h1>
+        <form [formGroup]="addTaskForm" class="addTask-form">
+            <mat-form-field appearance="fill">
+                <mat-label class="sugerencia-form">Escribe el nombre de la tarea</mat-label>
+                <input matInput placeholder="Implementación de la tarea" formControlName="name" required>
+            </mat-form-field>
+            <mat-error *ngIf="name.invalid && (name.dirty || name.touched)">El nombre de la tarea es obligatorio.
+            </mat-error>
+            <mat-form-field hintLabel="Mínimo 10 caracteres" appearance="fill">
+                <mat-label class="sugerencia-form">Descripción de la tarea</mat-label>
+                <input formControlName="description" matInput #input minlength="10"
+                    placeholder="Agrega una descripción de tu tarea">
+                <mat-hint align="end">{{input.value.length}}</mat-hint>
+            </mat-form-field>
+            <mat-error *ngIf="description.invalid && (description.dirty || description.touched)">La descripción debe
+                tener al meos 10 caracteres.</mat-error>
+        </form>
+        <div mat-dialog-actions>
+            <button mat-button mat-dialog-close="">Cancelar</button>
+            <button mat-raised-button cdkFocusInitial (click)="addkTask()"
+                [disabled]="addTaskForm.invalid">Agregar</button>
+        </div>
+    </section>
+    <div id="carga-task">
+    </div>
+    <div id="informe-status">
+        <p>Completando el proceso..</p>
+    </div>
+</article>
